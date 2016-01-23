@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Conversor de Moedas</string>
+    <string name="converter">Converter</string>
+    <string name="resultado">Resultado:</string>
+    <string name="real">Valor em Reais</string>
+
+    <!-- Errors -->
+    <string name="error_noinput">Digite um valor</string>
+    <string name="error_invalidinput">Digite um valor</string>
+
+    <string-array name="moedas">
+        <item>Dólar Americano</item>
+        <item>Dólar Canadense</item>
+        <item>Euro</item>
+        <item>Libras</item>
+    </string-array>
+
+    <string-array name="moedasValues">
+        <item>4</item>
+        <item>2.5</item>
+        <item>3.5</item>
+        <item>4.2</item>
+    </string-array>
+</resources>
