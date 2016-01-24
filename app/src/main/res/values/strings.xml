@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">CadastramentoCNAT-IFRN</string>
+    <string name="app_name">Cadastramento CNAT-IFRN</string>
+
+    <string name="nome">Nome</string>
+    <string name="matricula">Matrícula</string>
+    <string name="diretoria">Diretoria</string>
+    <string name="curso">Curso</string>
+    <string name="registrar">Registrar</string>
+    <string name="reset">Reset</string>
+    <string name="completo">Registro completo!</string>
 </resources>
