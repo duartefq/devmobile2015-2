@@ -1,5 +1,5 @@
 #!/bin/sh
-branch="05-cadastramentocnatifrn-app"
+branch="04-cadastramentocnatifrn-app"
 
 echo "Pushing to $branch"
 git push origin master:$branch
