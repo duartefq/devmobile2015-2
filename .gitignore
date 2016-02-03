@@ -6,3 +6,5 @@
 .DS_Store
 /build
 /captures
+push-main.sh
+push-fragmentos.sh
