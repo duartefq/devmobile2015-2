@@ -1,4 +1,4 @@
-# Conversor de Moedas app
+# Agenda de Contatos simples
 
 App para a tarefa **Tarefa Prática de 02/Fev/2016** da disciplina **Desenvolvimento para Dispositivos Móveis 2015.2** com o professor **Fellipe Araujo Aleixo**, de acordo com a especificação:
 
