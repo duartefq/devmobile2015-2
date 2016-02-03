@@ -10,7 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,15 +20,13 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonEditar;
     private Button buttonExcluir;
 
-    private TextView textViewContatos;
+    private BlankFragment myFragment;
 
-    private Agenda agenda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        agenda = new Agenda();
 
         editTextNome = (EditText) findViewById(R.id.editTextNome);
         editTextFone = (EditText) findViewById(R.id.editTextFone);
@@ -38,7 +35,14 @@ public class MainActivity extends AppCompatActivity {
         buttonEditar = (Button) findViewById(R.id.buttonEditar);
         buttonExcluir = (Button) findViewById(R.id.buttonExcluir);
 
-        textViewContatos = (TextView) findViewById(R.id.textViewContatos);
+        Object frag = findViewById(R.id.contato_fragment);
+
+        try {
+            myFragment = (BlankFragment) frag;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -55,32 +59,25 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttonClick(View v) {
         if (v.equals(buttonInserir)) {
-            agenda.inserir(
+            myFragment.inserir(
                     this.editTextNome.getText().toString(),
                     this.editTextFone.getText().toString()
             );
-
-            textViewContatos.setText(agenda.toString());
 
         }
 
         if (v.equals(buttonEditar)) {
-            agenda.editar(
+            myFragment.editar(
                     this.editTextNome.getText().toString(),
                     this.editTextFone.getText().toString()
             );
 
-            textViewContatos.setText(agenda.toString());
-
         }
 
         if (v.equals(buttonExcluir)) {
-            agenda.excluir(
+            myFragment.excluir(
                     this.editTextNome.getText().toString()
             );
-
-            textViewContatos.setText(agenda.toString());
-
         }
     }
 

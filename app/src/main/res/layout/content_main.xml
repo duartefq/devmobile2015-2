@@ -58,13 +58,12 @@
 
     </RelativeLayout>
 
-    <TextView
+    <fragment
+        android:name="br.ifrn.tads.ddm.agendadecontatos.BlankFragment"
+        android:id="@+id/contato_fragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/textViewContatos"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:gravity="center"
-        android:text="@string/contatos"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
 
 </LinearLayout>
