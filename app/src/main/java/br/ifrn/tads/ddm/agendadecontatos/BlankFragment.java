@@ -1,5 +1,6 @@
 package br.ifrn.tads.ddm.agendadecontatos;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,10 +15,20 @@ public class BlankFragment extends Fragment {
     private TextView textViewContatos;
 
 
+
     public BlankFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,7 +39,6 @@ public class BlankFragment extends Fragment {
 
         agenda = new Agenda();
         textViewContatos = (TextView) rootView.findViewById(R.id.textViewContatos);
-
         return rootView;
     }
 

@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonEditar;
     private Button buttonExcluir;
 
-    private BlankFragment myFragment;
 
+    private BlankFragment myFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +35,10 @@ public class MainActivity extends AppCompatActivity {
         buttonEditar = (Button) findViewById(R.id.buttonEditar);
         buttonExcluir = (Button) findViewById(R.id.buttonExcluir);
 
-        Object frag = findViewById(R.id.contato_fragment);
 
-        try {
-            myFragment = (BlankFragment) frag;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        myFragment = (BlankFragment)
+                getSupportFragmentManager().findFragmentById(R.id.contato_fragment);
+
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -63,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                     this.editTextNome.getText().toString(),
                     this.editTextFone.getText().toString()
             );
-
         }
 
         if (v.equals(buttonEditar)) {

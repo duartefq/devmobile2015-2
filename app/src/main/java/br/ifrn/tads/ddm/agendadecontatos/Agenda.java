@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 
 public class Agenda extends ArrayList<Contato> {
+
     private static final long serialVersionUID = 1L;
 
 
