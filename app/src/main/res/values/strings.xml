@@ -2,7 +2,7 @@
     <string name="app_name">Agenda de Aniversários</string>
     <string name="input_name">Nome</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="pick_date">Escolher uma data</string>
     <string name="button_insert">Inserir aniversário</string>
+    <string name="lista_aniversarios">Lista de Aniversários</string>
 </resources>
