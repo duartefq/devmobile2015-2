@@ -18,5 +18,5 @@ Para acessar cada projeto, altere a branch do repo, [ou veja a lista de branches
 
 1. [Agenda de Contatos simples](https://github.com/duartefq/mobiledev20152/tree/tarefa-patrica-2fev-1-agenda)
 1. [Agenda de Contatos com fragmentos](https://github.com/duartefq/mobiledev20152/tree/tarefa-patrica-2fev-2-fragmentos)
-1. #TODO
+1. [Agenda de Contatos com fragmentos](https://github.com/duartefq/mobiledev20152/tree/tarefa-patrica-2fev-3-agenda-aniversarios) 
 
