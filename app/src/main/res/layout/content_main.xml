@@ -14,58 +14,28 @@
     android:orientation="vertical">
 
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextNome"
-        android:inputType="text"
-        android:hint="@string/nome"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editTextFone"
-        android:hint="@string/fone"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        android:text="@string/app_name"
         android:gravity="center"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        android:textColor="@android:color/white"
+        android:padding="@dimen/activity_vertical_margin"
+        android:textAppearance="@android:style/TextAppearance.Large"/>
 
-        <Button
-            android:id="@+id/buttonInserir"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/inserir"
-            android:onClick="buttonClick" />
-
-        <Button
-            android:id="@+id/buttonEditar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/editar"
-            android:layout_toEndOf="@id/buttonInserir"
-            android:layout_toRightOf="@id/buttonInserir"
-            android:onClick="buttonClick" />
-
-        <Button
-            android:id="@+id/buttonExcluir"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/excluir"
-            android:layout_toEndOf="@id/buttonEditar"
-            android:layout_toRightOf="@id/buttonEditar"
-            android:onClick="buttonClick" />
-
-    </RelativeLayout>
+    <fragment
+        android:name="br.ifrn.tads.ddm.agendadecontatos.FormFragment"
+        android:id="@+id/form_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_form" />
 
     <fragment
         android:name="br.ifrn.tads.ddm.agendadecontatos.BlankFragment"
         android:id="@+id/contato_fragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        />
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_blank" />
 
 </LinearLayout>

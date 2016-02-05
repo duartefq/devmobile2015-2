@@ -1,25 +1,13 @@
 package br.ifrn.tads.ddm.agendadecontatos;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FormFragment.OnButtonClicked {
 
-    private EditText editTextNome;
-    private EditText editTextFone;
-
-    private Button buttonInserir;
-    private Button buttonEditar;
-    private Button buttonExcluir;
-
+    private final int ACTION_INSERIR = 0;
+    private final int ACTION_EDITAR = 1;
+    private final int ACTION_EXCLUIR = 2;
 
     private BlankFragment myFragment;
 
@@ -28,74 +16,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextNome = (EditText) findViewById(R.id.editTextNome);
-        editTextFone = (EditText) findViewById(R.id.editTextFone);
-
-        buttonInserir = (Button) findViewById(R.id.buttonInserir);
-        buttonEditar = (Button) findViewById(R.id.buttonEditar);
-        buttonExcluir = (Button) findViewById(R.id.buttonExcluir);
-
-
         myFragment = (BlankFragment)
                 getSupportFragmentManager().findFragmentById(R.id.contato_fragment);
-
-
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-    }
-
-    public void buttonClick(View v) {
-        if (v.equals(buttonInserir)) {
-            myFragment.inserir(
-                    this.editTextNome.getText().toString(),
-                    this.editTextFone.getText().toString()
-            );
-        }
-
-        if (v.equals(buttonEditar)) {
-            myFragment.editar(
-                    this.editTextNome.getText().toString(),
-                    this.editTextFone.getText().toString()
-            );
-
-        }
-
-        if (v.equals(buttonExcluir)) {
-            myFragment.excluir(
-                    this.editTextNome.getText().toString()
-            );
-        }
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    public void sendAction(int action, String nome, String fone) {
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (action) {
+            case ACTION_INSERIR:
+                myFragment.inserir( nome, fone );
+                break;
+            case ACTION_EDITAR:
+                myFragment.editar(nome, fone);
+                break;
+            case ACTION_EXCLUIR:
+                myFragment.excluir(nome);
+                break;
         }
-
-        return super.onOptionsItemSelected(item);
     }
+
 }
