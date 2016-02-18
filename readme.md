@@ -1,4 +1,4 @@
-# Agenda de Telefones com Intentions
+# Agenda de Telefones v3
 
 App para a tarefa **Aula Prática de 16/Fev/2016** da disciplina **Desenvolvimento para Dispositivos Móveis 2015.2** com o professor **Fellipe Araujo Aleixo**, de acordo com a especificação:
 
