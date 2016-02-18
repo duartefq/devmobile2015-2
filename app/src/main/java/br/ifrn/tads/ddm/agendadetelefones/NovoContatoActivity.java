@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,11 +17,12 @@ public class NovoContatoActivity extends AppCompatActivity {
     private Button btnCancel;
     private EditText editNome;
     private EditText editFone;
-
+    private final String Tag="NovoContato";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(Tag, "onCreate");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_novo_contato);
@@ -44,24 +46,67 @@ public class NovoContatoActivity extends AppCompatActivity {
         });
     }
 
-      public void buttonClick(View v) {
+    @Override
+    protected void onStart() {
+        Log.i(Tag, "onStart");
 
-          if (btnInserir == v) {
-              Intent ret = new Intent();
-              String nome = editNome.getText().toString();
-              String fone = editFone.getText().toString();
+        super.onStart();
+    }
 
-              ret.putExtra("nome", nome);
-              ret.putExtra("fone", fone);
+    @Override
+    protected void onResume() {
+        Log.i(Tag, "onResume");
 
-              setResult(RESULT_OK, ret);
-              finish();
-          }
-          if (btnCancel == v) {
-              setResult(RESULT_CANCELED);
-              finish();
-          }
+        super.onResume();
+    }
 
-      }
+    @Override
+    protected void onRestart() {
+        Log.i(Tag, "onRestart");
+
+        super.onRestart();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.i(Tag, "onPause");
+
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.i(Tag, "onStop");
+
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.i(Tag, "onDestroy");
+
+        super.onDestroy();
+    }
+
+    public void buttonClick(View v) {
+        Log.i(Tag, "buttonClick");
+
+        if (btnInserir == v) {
+            Intent ret = new Intent();
+            String nome = editNome.getText().toString();
+            String fone = editFone.getText().toString();
+
+            ret.putExtra("nome", nome);
+            ret.putExtra("fone", fone);
+
+            setResult(RESULT_OK, ret);
+            finish();
+        }
+        if (btnCancel == v) {
+            setResult(RESULT_CANCELED);
+            finish();
+        }
+
+    }
 
 }
