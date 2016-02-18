@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AgendaDeTelefones</string>
+    <string name="action_settings">Configurações</string>
+    <string name="action_close">Fechar</string>
+
+    <string name="title">Agenda de Telefones</string>
+    <string name="subtitle">IFRN 2015.2</string>
+    <string name="novoContato">Novo Contato</string>
+    <string name="nome">Digite o seu nome aqui</string>
+    <string name="telefone">Digite o seu telefone aqui</string>
+    <string name="inserir">Inserir</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="ligar">Ligar</string>
+    <string name="sobre">Sobre</string>
+
+    <string name="title_activity_novo_contato">Novo Contato</string>
+    <string name="title_activity_sobre">Sobre</string>
+</resources>
