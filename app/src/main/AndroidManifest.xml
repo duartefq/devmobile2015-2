@@ -19,10 +19,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NovoContatoActivity"
-            android:label="@string/title_activity_novo_contato"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".SobreActivity"
             android:label="@string/title_activity_sobre"
             android:theme="@style/AppTheme.NoActionBar"></activity>

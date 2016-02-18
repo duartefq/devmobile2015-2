@@ -10,7 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="br.ifrn.tads.ddm.agendadetelefones.NovoContatoActivity"
     tools:showIn="@layout/activity_novo_contato">
 
     <EditText
