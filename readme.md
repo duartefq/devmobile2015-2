@@ -20,3 +20,10 @@ Para acessar cada projeto, altere a branch do repo, [ou veja a lista de branches
 1. [Agenda de Contatos com fragmentos](https://github.com/duartefq/mobiledev20152/tree/tarefa-patrica-2fev-2-fragmentos)
 1. [Agenda de Aniversário com fragmentos](https://github.com/duartefq/mobiledev20152/tree/tarefa-patrica-2fev-3-agenda-aniversarios) 
 
+### Aula Prática de 16/Fev/2016 
+*(Fev 16)*
+
+1. [Agenda de Telefones com Intentions](https://github.com/duartefq/mobiledev20152/tree/aula-patrica-16fev-1-agenda)
+1. [App Ciclo de Vida](https://github.com/duartefq/mobiledev20152/tree/aula-patrica-16fev-2-ciclodevida)
+1. [Agenda de Telefones v3](https://github.com/duartefq/mobiledev20152/tree/aula-patrica-16fev-3-agenda-v3) 
+
